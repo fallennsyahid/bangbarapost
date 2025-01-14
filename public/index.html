@@ -7,6 +7,7 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/extra.css" />
 
     <!-- ICON -->
     <link rel="icon" href="assets/png/logo_bangbara.png" />
@@ -19,34 +20,6 @@
       rel="stylesheet"
     />
   </head>
-  <style>
-    .header-img {
-      background-image: url("./assets/png/header.png");
-      background-size: cover;
-      background-position: center;
-      min-height: 100vh;
-    }
-
-    .menu-img {
-      background-image: url("./assets/png/menu.png");
-      background-size: cover;
-      background-position: center;
-      min-height: 100vh;
-    }
-
-    .about-img {
-      background-image: url("./assets/png/about.png");
-      background-size: cover;
-      background-position: center;
-      min-height: 100vh;
-    }
-
-    .input-number::-webkit-outer-spin-button,
-    .input-number::-webkit-inner-spin-button {
-      appearance: none;
-      margin: 0;
-    }
-  </style>
   <body>
     <section id="navbarHeader" class="header-img">
       <!-- Navbar Start -->
@@ -146,11 +119,10 @@
         id="menu-container"
         class="grid grid-cols-3 gap-4 mx-auto py-10 w-[55rem] text-center"
       >
-        <!-- Bagian Header -->
         <div>
           <a
             href="#"
-            class="relative text-white font-qwigley text-5xl hover:text-yellow-400 after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:bg-white hover:after:bg-yellow-400"
+            class="menu-link relative text-white font-qwigley text-5xl hover:text-yellow-400 after:absolute after:left-0 after:bottom-0 after:h-[10px] after:w-full after:bg-white hover:after:bg-yellow-400 active"
           >
             Makanan
           </a>
@@ -159,7 +131,7 @@
         <div>
           <a
             href="#"
-            class="relative text-white font-qwigley text-5xl hover:text-yellow-400 after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:bg-white hover:after:bg-yellow-400"
+            class="menu-link relative text-white font-qwigley text-5xl hover:text-yellow-400 after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:bg-white hover:after:bg-yellow-400"
           >
             Minuman
           </a>
@@ -167,13 +139,12 @@
         <div>
           <a
             href="#"
-            class="relative text-white font-qwigley text-5xl hover:text-yellow-400 after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:bg-white hover:after:bg-yellow-400"
+            class="menu-link relative text-white font-qwigley text-5xl hover:text-yellow-400 after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:bg-white hover:after:bg-yellow-400"
           >
             Extra
           </a>
         </div>
 
-        <!-- Bagian Kotak Kuning -->
         <div class="flex justify-center py-10">
           <div
             class="bg-white h-60 w-40 rounded-md flex flex-col items-center gap-2"
