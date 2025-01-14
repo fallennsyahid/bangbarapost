@@ -935,6 +935,10 @@ video {
   text-align: center;
 }
 
+.font-alatsi {
+  font-family: Alatsi, sans-serif;
+}
+
 .font-alkatra {
   font-family: Alkatra, sans-serif;
 }
@@ -961,10 +965,6 @@ video {
 
 .font-qwigley {
   font-family: Qwigley, sans-serif;
-}
-
-.font-alatsi {
-  font-family: Alatsi, sans-serif;
 }
 
 .text-5xl {
@@ -1069,9 +1069,11 @@ body {
 .navbar-fixed {
   position: fixed;
   z-index: 9999;
+  width: 100%;
+  --tw-bg-opacity: 1;
   background-color: rgb(0 0 0 / var(--tw-bg-opacity, 1));
-  --tw-bg-opacity: 0.7;
-  --tw-backdrop-blur: blur(4px);
+  background-color: transparent;
+  --tw-backdrop-blur: blur(12px);
   -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
   backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
   box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.2);
