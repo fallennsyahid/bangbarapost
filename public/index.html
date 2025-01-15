@@ -115,148 +115,194 @@
         </div>
         <span class=""></span>
       </div>
-      <div
-        id="menu-container"
-        class="grid grid-cols-3 gap-4 mx-auto py-10 w-[55rem] text-center"
-      >
-        <div>
-          <a
-            href="#"
-            class="menu-link relative text-white font-qwigley text-5xl hover:text-yellow-400 after:absolute after:left-0 after:bottom-0 after:h-[10px] after:w-full after:bg-white hover:after:bg-yellow-400 active"
+      <div class="w-full py-10 text-center">
+        <!-- Tab Navigation -->
+        <div class="flex justify-center gap-32">
+          <button
+            onclick="changeSlide(0)"
+            class="menu-link relative text-white font-qwigley text-5xl hover:text-yellow-400 after:absolute after:left-0 after:bottom-0 after:h-[2px] after:rounded-full after:w-full after:bg-white hover:after:bg-yellow-400 active"
           >
             Makanan
-          </a>
-        </div>
-
-        <div>
-          <a
-            href="#"
-            class="menu-link relative text-white font-qwigley text-5xl hover:text-yellow-400 after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:bg-white hover:after:bg-yellow-400"
+          </button>
+          <button
+            onclick="changeSlide(1)"
+            class="menu-link relative text-white font-qwigley text-5xl hover:text-yellow-400 after:absolute after:left-0 after:bottom-0 after:h-[2px] after:rounded-full after:w-full after:bg-white hover:after:bg-yellow-400"
           >
             Minuman
-          </a>
-        </div>
-        <div>
-          <a
-            href="#"
-            class="menu-link relative text-white font-qwigley text-5xl hover:text-yellow-400 after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:bg-white hover:after:bg-yellow-400"
+          </button>
+          <button
+            onclick="changeSlide(2)"
+            class="menu-link relative text-white font-qwigley text-5xl hover:text-yellow-400 after:absolute after:left-0 after:bottom-0 after:h-[2px] after:rounded-full after:w-full after:bg-white hover:after:bg-yellow-400"
           >
             Extra
-          </a>
+          </button>
         </div>
 
-        <div class="flex justify-center py-10">
+        <!-- Slider Container -->
+        <div id="slider" class="relative overflow-hidden w-full mt-10">
           <div
-            class="bg-white h-60 w-40 rounded-md flex flex-col items-center gap-2"
+            id="slider-content"
+            class="flex transition-transform duration-500"
+            style="width: 300%"
           >
-            <img src="./assets/png/food/1.png" alt="" class="overflow-hidden" />
-            <p class="text-text text-xs font-marmelad text-center">
-              Steak Terderloin Meltique
-            </p>
-            <span class="text-price font-alkatra text-[0.6rem] text-center">
-              Rp. 38.000,00
-            </span>
-            <a
-              href=""
-              class="font-marmelad text-[0.6rem] bg-[#BF0000] px-4 py-2 rounded-full text-white"
-            >
-              Tambahkan Ke Keranjang
-            </a>
-          </div>
-        </div>
-        <div class="flex justify-center py-10">
-          <div
-            class="bg-white h-60 w-40 rounded-md flex flex-col items-center gap-2"
-          >
-            <img src="./assets/png/food/1.png" alt="" class="overflow-hidden" />
-            <p class="text-text text-xs font-marmelad text-center">
-              Steak Terderloin Meltique
-            </p>
-            <span class="text-price font-alkatra text-[0.6rem] text-center">
-              Rp. 38.000,00
-            </span>
-            <a
-              href=""
-              class="font-marmelad text-[0.6rem] bg-[#BF0000] px-4 py-2 rounded-full text-white"
-            >
-              Tambahkan Ke Keranjang
-            </a>
-          </div>
-        </div>
-        <div class="flex justify-center py-10">
-          <div
-            class="bg-white h-60 w-40 rounded-md flex flex-col items-center gap-2"
-          >
-            <img src="./assets/png/food/1.png" alt="" class="overflow-hidden" />
-            <p class="text-text text-xs font-marmelad text-center">
-              Steak Terderloin Meltique
-            </p>
-            <span class="text-price font-alkatra text-[0.6rem] text-center">
-              Rp. 38.000,00
-            </span>
-            <a
-              href=""
-              class="font-marmelad text-[0.6rem] bg-[#BF0000] px-4 py-2 rounded-full text-white"
-            >
-              Tambahkan Ke Keranjang
-            </a>
-          </div>
-        </div>
-        <div class="flex justify-center py-10">
-          <div
-            class="bg-white h-60 w-40 rounded-md flex flex-col items-center gap-2"
-          >
-            <img src="./assets/png/food/1.png" alt="" class="overflow-hidden" />
-            <p class="text-text text-xs font-marmelad text-center">
-              Steak Terderloin Meltique
-            </p>
-            <span class="text-price font-alkatra text-[0.6rem] text-center">
-              Rp. 38.000,00
-            </span>
-            <a
-              href=""
-              class="font-marmelad text-[0.6rem] bg-[#BF0000] px-4 py-2 rounded-full text-white"
-            >
-              Tambahkan Ke Keranjang
-            </a>
-          </div>
-        </div>
-        <div class="flex justify-center py-10">
-          <div
-            class="bg-white h-60 w-40 rounded-md flex flex-col items-center gap-2"
-          >
-            <img src="./assets/png/food/1.png" alt="" class="overflow-hidden" />
-            <p class="text-text text-xs font-marmelad text-center">
-              Steak Terderloin Meltique
-            </p>
-            <span class="text-price font-alkatra text-[0.6rem] text-center">
-              Rp. 38.000,00
-            </span>
-            <a
-              href=""
-              class="font-marmelad text-[0.6rem] bg-[#BF0000] px-4 py-2 rounded-full text-white"
-            >
-              Tambahkan Ke Keranjang
-            </a>
-          </div>
-        </div>
-        <div class="flex justify-center py-10">
-          <div
-            class="bg-white h-60 w-40 rounded-md flex flex-col items-center gap-2"
-          >
-            <img src="./assets/png/food/1.png" alt="" class="overflow-hidden" />
-            <p class="text-text text-xs font-marmelad text-center">
-              Steak Terderloin Meltique
-            </p>
-            <span class="text-price font-alkatra text-[0.6rem] text-center">
-              Rp. 38.000,00
-            </span>
-            <a
-              href=""
-              class="font-marmelad text-[0.6rem] bg-[#BF0000] px-4 py-2 rounded-full text-white"
-            >
-              Tambahkan Ke Keranjang
-            </a>
+            <!-- Slide 1: Makanan -->
+            <div class="w-full grid grid-cols-3 gap-2">
+              <div class="flex justify-center py-10">
+                <div
+                  class="bg-white h-60 w-40 rounded-md flex flex-col items-center gap-2"
+                >
+                  <img
+                    src="./assets/png/food/1.png"
+                    alt=""
+                    class="overflow-hidden"
+                  />
+                  <p class="text-text text-xs font-marmelad text-center">
+                    Steak Terderloin Meltique
+                  </p>
+                  <span
+                    class="text-price font-alkatra text-[0.6rem] text-center"
+                  >
+                    Rp. 38.000,00
+                  </span>
+                  <a
+                    href=""
+                    class="font-marmelad text-[0.6rem] bg-[#BF0000] px-4 py-2 rounded-full text-white"
+                    >Tambahkan Ke Keranjang</a
+                  >
+                </div>
+              </div>
+              <!-- Tambahkan produk lainnya di sini -->
+              <div class="flex justify-center py-10">
+                <div
+                  class="bg-white h-60 w-40 rounded-md flex flex-col items-center gap-2"
+                >
+                  <img
+                    src="./assets/png/food/1.png"
+                    alt=""
+                    class="overflow-hidden"
+                  />
+                  <p class="text-text text-xs font-marmelad text-center">
+                    Steak Terderloin Meltique
+                  </p>
+                  <span
+                    class="text-price font-alkatra text-[0.6rem] text-center"
+                  >
+                    Rp. 38.000,00
+                  </span>
+                  <a
+                    href=""
+                    class="font-marmelad text-[0.6rem] bg-[#BF0000] px-4 py-2 rounded-full text-white"
+                    >Tambahkan Ke Keranjang</a
+                  >
+                </div>
+              </div>
+              <div class="flex justify-center py-10">
+                <div
+                  class="bg-white h-60 w-40 rounded-md flex flex-col items-center gap-2"
+                >
+                  <img
+                    src="./assets/png/food/1.png"
+                    alt=""
+                    class="overflow-hidden"
+                  />
+                  <p class="text-text text-xs font-marmelad text-center">
+                    Steak Terderloin Meltique
+                  </p>
+                  <span
+                    class="text-price font-alkatra text-[0.6rem] text-center"
+                  >
+                    Rp. 38.000,00
+                  </span>
+                  <a
+                    href=""
+                    class="font-marmelad text-[0.6rem] bg-[#BF0000] px-4 py-2 rounded-full text-white"
+                    >Tambahkan Ke Keranjang</a
+                  >
+                </div>
+              </div>
+              <div class="flex justify-center py-10">
+                <div
+                  class="bg-white h-60 w-40 rounded-md flex flex-col items-center gap-2"
+                >
+                  <img
+                    src="./assets/png/food/1.png"
+                    alt=""
+                    class="overflow-hidden"
+                  />
+                  <p class="text-text text-xs font-marmelad text-center">
+                    Steak Terderloin Meltique
+                  </p>
+                  <span
+                    class="text-price font-alkatra text-[0.6rem] text-center"
+                  >
+                    Rp. 38.000,00
+                  </span>
+                  <a
+                    href=""
+                    class="font-marmelad text-[0.6rem] bg-[#BF0000] px-4 py-2 rounded-full text-white"
+                    >Tambahkan Ke Keranjang</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 2: Minuman -->
+            <div class="w-full grid grid-cols-3 gap-4">
+              <div class="flex justify-center py-10">
+                <div
+                  class="bg-white h-60 w-40 rounded-md flex flex-col items-center gap-2"
+                >
+                  <img
+                    src="./assets/png/drink/1.png"
+                    alt=""
+                    class="overflow-hidden"
+                  />
+                  <p class="text-text text-xs font-marmelad text-center">
+                    Jus Mangga Segar
+                  </p>
+                  <span
+                    class="text-price font-alkatra text-[0.6rem] text-center"
+                  >
+                    Rp. 18.000,00
+                  </span>
+                  <a
+                    href=""
+                    class="font-marmelad text-[0.6rem] bg-[#BF0000] px-4 py-2 rounded-full text-white"
+                    >Tambahkan Ke Keranjang</a
+                  >
+                </div>
+              </div>
+              <!-- Tambahkan produk lainnya di sini -->
+            </div>
+
+            <!-- Slide 3: Extra -->
+            <div class="w-full grid grid-cols-3 gap-4">
+              <div class="flex justify-center py-10">
+                <div
+                  class="bg-white h-60 w-40 rounded-md flex flex-col items-center gap-2"
+                >
+                  <img
+                    src="./assets/png/extra/1.png"
+                    alt=""
+                    class="overflow-hidden"
+                  />
+                  <p class="text-text text-xs font-marmelad text-center">
+                    Kentang Goreng
+                  </p>
+                  <span
+                    class="text-price font-alkatra text-[0.6rem] text-center"
+                  >
+                    Rp. 15.000,00
+                  </span>
+                  <a
+                    href=""
+                    class="font-marmelad text-[0.6rem] bg-[#BF0000] px-4 py-2 rounded-full text-white"
+                    >Tambahkan Ke Keranjang</a
+                  >
+                </div>
+              </div>
+              <!-- Tambahkan produk lainnya di sini -->
+            </div>
           </div>
         </div>
       </div>
@@ -356,7 +402,7 @@
                   width="40px"
                   class="px-2"
               /></a>
-              <a href=""
+              <a href="https://www.tiktok.com/@bangbarasteak" target="_blank"
                 ><img
                   src="assets/svg/tiktok.svg"
                   alt=""
@@ -382,7 +428,14 @@
           </div>
           <div class="mt-12 mb-6 mx-10">
             <h3 class="font-amiri text-white text-xl text-center pb-3">Maps</h3>
-            <img src="assets/svg/maps.svg" alt="" width="100px" />
+            <a href="https://maps.app.goo.gl/QJJSghdQJtVT7pj77" target="_blank">
+              <img
+                src="assets/svg/maps.svg"
+                alt=""
+                width="100px"
+                class="transition duration-300 ease-in-out hover:scale-110"
+              />
+            </a>
           </div>
         </div>
       </div>
@@ -390,4 +443,11 @@
     <!-- Footer Section End -->
   </body>
   <script src="js/script.js"></script>
+  <script>
+    function changeSlide(index) {
+      const sliderContent = document.getElementById("slider-content");
+      const slideWidth = sliderContent.clientWidth / 3; // Menghitung lebar satu slide
+      sliderContent.style.transform = `translateX(-${index * slideWidth}px)`; // Menggeser sesuai index
+    }
+  </script>
 </html>
