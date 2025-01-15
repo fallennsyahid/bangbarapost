@@ -33,6 +33,33 @@ function changeSlide(index) {
     sliderContent.style.transform = `translateX(-${index * slideWidth}px)`; // Menggeser sesuai index
 }
 
+// POPUP
+const itemDetailModal = document.querySelector('#item-detail-modal');
+const itemDetailButtons = document.querySelectorAll('.item-detail-button');
+
+itemDetailButtons.forEach((btn) => {
+    btn.onclick = (e) => {
+        itemDetailModal.style.display = 'flex';
+        e.preventDefault();
+    };
+});
+
+itemDetailButtons.onclick = (e) => {
+    itemDetailModal.style.display = 'flex';
+    e.preventDefault();
+};
+
+
+document.querySelector('.close-icon').onclick = (e) => {
+    itemDetailModal.style.display = 'none';
+    e.preventDefault();
+};
+
+window.onclick = (e) => {
+    if (e.target === itemDetailModal) {
+        itemDetailModal.style.display = 'none';
+    };
+};
 
 
 const hamburger = document.getElementById('#hamburger');

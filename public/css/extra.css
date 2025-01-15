@@ -48,3 +48,19 @@
   appearance: none;
   margin: 0;
 }
+
+.animation {
+  animation: animateModal 0.5s;
+  -webkit-animation: animateModal 0.5s;
+}
+
+@keyframes animateModal {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}

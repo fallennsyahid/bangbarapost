@@ -64,6 +64,9 @@ module.exports = {
       'alatsi': [
         'Alatsi', 'sans-serif'
       ],
+      'alata': [
+        'Alata', 'sans-serif',
+      ],
     },
     extend: {
       colors: {
