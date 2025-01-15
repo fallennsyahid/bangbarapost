@@ -108,7 +108,7 @@
       <div class="flex">
         <span class=""></span>
         <div
-          class="flex items-center bg-primary mx-auto my-4 py-2 px-16 text-center rounded-2xl shadow-md shadow-primary"
+          class="flex items-center bg-primary mx-auto my-5 py-2 px-16 text-center rounded-2xl shadow-md shadow-primary"
         >
           <img src="assets/svg/book.svg" alt="" width="100px" class="mr-4" />
           <h1 class="font-qwigley text-6xl text-white">Menu Kami</h1>
@@ -117,7 +117,7 @@
       </div>
       <div class="w-full py-10 text-center">
         <!-- Tab Navigation -->
-        <div class="flex justify-center gap-32">
+        <div class="flex justify-center gap-x-32">
           <button
             onclick="changeSlide(0)"
             class="menu-link relative text-white font-qwigley text-5xl hover:text-yellow-400 after:absolute after:left-0 after:bottom-0 after:h-[2px] after:rounded-full after:w-full after:bg-white hover:after:bg-yellow-400 active"
@@ -382,7 +382,9 @@
     <footer class="bg-black">
       <div class="container">
         <div class="flex flex-wrap justify-between">
-          <img src="assets/svg/logo-navbar.svg" alt="100px" class="p-4" />
+          <a href="#navbarHeader" class="mt-10 ml-6">
+            <img src="assets/svg/logo-navbar.svg" alt="100px" />
+          </a>
           <div class="mt-12 mb-6">
             <h3 class="font-amiri text-white text-xl text-center pb-3">
               Account
@@ -441,6 +443,10 @@
       </div>
     </footer>
     <!-- Footer Section End -->
+
+    <!-- POPUP START -->
+    <section id="popup"></section>
+    <!-- POPUP END -->
   </body>
   <script src="js/script.js"></script>
   <script>
