@@ -26,6 +26,13 @@ menuLinks.forEach(link => {
     });
 });
 
+// Menu Slide
+function changeSlide(index) {
+    const sliderContent = document.getElementById("slider-content");
+    const slideWidth = sliderContent.clientWidth / 3; // Menghitung lebar satu slide
+    sliderContent.style.transform = `translateX(-${index * slideWidth}px)`; // Menggeser sesuai index
+}
+
 
 
 const hamburger = document.getElementById('#hamburger');
