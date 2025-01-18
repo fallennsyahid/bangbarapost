@@ -61,9 +61,9 @@ window.onclick = (e) => {
     };
 };
 
-window.onscroll = function () {
-    itemDetailModal.style.display = 'none';
-}
+// window.onscroll = function () {
+//     itemDetailModal.style.display = 'none';
+// }
 
 
 const hamburger = document.getElementById('#hamburger');
