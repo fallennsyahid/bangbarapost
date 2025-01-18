@@ -67,6 +67,15 @@ module.exports = {
       'alata': [
         'Alata', 'sans-serif',
       ],
+      'paprika': [
+        'Paprika', 'sans-serif',
+      ],
+      'jakarta': [
+        'Plus Jakarta Sans', 'sans-serif',
+      ],
+      'pontanto': [
+        'Pontanto Sans', 'sans-serif',
+      ],
     },
     extend: {
       colors: {
