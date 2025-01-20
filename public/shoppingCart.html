@@ -1,434 +1,429 @@
-<!-- Shopping Cart start -->
-<x-header>
-  <link rel="stylesheet" href="./css/style.css">
-  <!-- <link rel="stylesheet" href="{{ asset('asset-views/css/style2.css?v=1.0') }}" /> -->
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  </section>
-</x-header>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<body>
-  <x-navbar></x-navbar>
-  <!-- {{-- Hero Section Start -->
-  <section class="relative h-[50vh] bg-cover bg-center" style="background-image: url(./assets/png/header.png); background-position: center; background-size: cover; background-repeat: no-repeat;">
-      <div class="absolute inset-0 bg-black/40 flex flex-col items-center justify-center">
-          <h1 class="text-white text-4xl font-bold">Cart</h1>
-          <p class="text-white cursor-pointer">Back / <a href="index.html"><span
-                      class="text-rose-400 hover:underline">Home</span></a></p>
+    <!-- ICON WEB -->
+    <link
+      rel="shortcut icon"
+      href="./assets/png/logo_bangbara.png"
+      type="image/x-icon"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/extra.css" />
+
+    <!-- JQUERY -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- FEATHER ICONS -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <!-- ALPINE JS -->
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+
+    <!-- SWEETALLERT -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alatsi&family=Alike&family=Alkatra:wght@400..700&family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Euphoria+Script&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Marmelad&family=Paprika&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Pontano+Sans:wght@300..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Protest+Riot&family=Qwigley&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Cart - Bangbara Pos</title>
+  </head>
+
+  <body>
+    <!-- {{-- Hero Section Start -->
+    <section
+      class="relative h-[50vh] bg-cover bg-center"
+      style="
+        background-image: url(./assets/png/header.png);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+      "
+    >
+      <div
+        class="absolute inset-0 bg-black/40 flex flex-col items-center justify-center"
+      >
+        <h1 class="text-white text-4xl font-bold">Cart</h1>
+        <p class="text-white cursor-pointer">
+          Back /
+          <a href="index.html"
+            ><span class="text-rose-400 hover:underline">Home</span></a
+          >
+        </p>
       </div>
-  </section>
-  <!-- {{-- Hero Section End -->
+    </section>
+    <!-- {{-- Hero Section End -->
 
-  <!--  Cart List Start  -->
-  <section
-      class="relative z-10 after:contents-[''] after:absolute after:z-0 after:h-full xl:after:w-1/3 after:top-0 after:right-0 after:bg-gray-50">
+    <!--  Cart List Start  -->
+    <section
+      class="relative z-10 after:contents-[''] after:absolute after:z-0 after:h-full xl:after:w-1/3 after:top-0 after:right-0 after:bg-gray-50"
+    >
       <div class="w-full max-w-7xl px-4 md:px-5 lg-6 mx-auto relative z-10">
-          <div class="grid grid-cols-12">
-              <div
-                  class="col-span-12 xl:col-span-8 lg:pr-8 pt-14 pb-8 lg:py-24 w-full max-xl:max-w-3xl max-xl:mx-auto">
-                  <div class="flex items-center justify-between pb-8 border-b border-gray-300">
-                          <h2 class="font-manrope font-bold text-3xl leading-10 text-black">Shopping Cart</h2>
-                          <h2 class="font-manrope font-bold text-xl leading-8 text-gray-600">1 Items
-                          </h2>
-                  </div>
-                  <div class="grid grid-cols-12 mt-8 max-md:hidden pb-6 border-b border-gray-200">
-                      <div class="col-span-12 md:col-span-7">
-                          <p class="font-normal text-lg leading-8 text-gray-400">Product Details</p>
-                      </div>
-                      <div class="col-span-12 md:col-span-5">
-                          <div class="grid grid-cols-5">
-                              <div class="col-span-3">
-                                  <p class="font-normal text-lg leading-8 text-gray-400 text-center">Quantity</p>
-                              </div>
-                              <div class="col-span-2">
-                                  <p class="font-normal text-lg leading-8 text-gray-400 text-center">Total</p>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
+        <div class="grid grid-cols-12">
+          <!-- Shopping Cart Section -->
+          <div
+            class="col-span-12 xl:col-span-8 lg:pr-8 pt-14 pb-8 lg:py-24 w-full max-xl:max-w-3xl max-xl:mx-auto"
+          >
+            <!-- Header -->
+            <div
+              class="flex items-center justify-between pb-8 border-b border-gray-300"
+            >
+              <h2 class="font-manrope font-bold text-3xl leading-10 text-black">
+                Shopping Cart
+              </h2>
+              <h2
+                class="font-manrope font-bold text-xl leading-8 text-gray-600"
+              >
+                1 Items
+              </h2>
+            </div>
 
-
-                  
-                      <div
-                          class="flex flex-col min-[500px]:flex-row min-[500px]:items-center gap-5 py-6 border-b border-gray-200 group">
-                          <div class="w-full max-w-[126px] sm:justify-center">
-                              <img src="./assets/png/food/1.png" alt=""
-                                  class="mx-auto rounded-xl object-cover">
-                          </div>
-                          <div class="grid grid-cols-1 md:grid-cols-4 w-full">
-                              <div class="md:col-span-2">
-                                  <div class="flex flex-col max-[500px]:items-center gap-3">
-                                      <h6 class="font-semibold text-base leading-7 text-black">
-                                          Steak</h6>
-                                      <h6 class="font-normal text-base leading-7 text-gray-500">
-                                          Makanan</h6>
-                                      <h6
-                                          class="font-medium text-base leading-7 text-gray-600 transition-all duration-300 group-hover:text-rose-300">
-                                          Rp 86.000,00</h6>
-                                  </div>
-                              </div>
-                              <div class="flex items-center max-[500px]:justify-center h-full max-md:mt-3">
-                                  <div class="flex items-center justify-center h-full" style="flex-direction: row;">
-                                      <form action="#" method="POST"
-                                          style="display: inline;">
-                                          
-                                          <input type="hidden" name="id" value="{{ $item->product->id }}">
-                                          <button type="submit" name="quantity" value="{{ $item->quantity - 1 }}"
-                                              class="group rounded-l-xl px-5 py-[18px] border border-gray-200 flex items-center justify-center shadow-sm transition-all duration-500 hover:bg-gray-50 hover:border-gray-300 focus-within:outline-gray-300">
-                                              <svg class="stroke-gray-900 transition-all duration-500 group-hover:stroke-black"
-                                                  xmlns="http://www.w3.org/2000/svg" width="22" height="22"
-                                                  viewBox="0 0 22 22" fill="none">
-                                                  <path d="M16.5 11H5.5" stroke-width="1.6" stroke-linecap="round" />
-                                              </svg>
-                                          </button>
-                                      </form> 
-
-                                      <input type="text"
-                                          class="border-y border-gray-200 outline-none text-gray-900 font-semibold text-lg w-full max-w-[73px] min-w-[60px] text-center bg-transparent"
-                                          value="2" readonly>
-
-                                      <form action="{{ route('cart.update') }}" method="POST"
-                                          style="display: inline;">
-                                          
-                                          <input type="hidden" name="id" value="{{ $item->product->id }}">
-                                          <button type="submit" name="quantity" value="{{ $item->quantity + 1 }}"
-                                              class="group rounded-r-xl px-5 py-[18px] border border-gray-200 flex items-center justify-center shadow-sm transition-all duration-500 hover:bg-gray-50 hover:border-gray-300 focus-within:outline-gray-300">
-                                              <svg class="stroke-gray-900 transition-all duration-500 group-hover:stroke-black"
-                                                  xmlns="http://www.w3.org/2000/svg" width="22" height="22"
-                                                  viewBox="0 0 22 22" fill="none">
-                                                  <path d="M11 5.5V16.5M16.5 11H5.5" stroke-width="1.6"
-                                                      stroke-linecap="round" />
-                                              </svg>
-                                          </button>
-                                      </form>
-                                  </div>
-                              </div>
-                              <div
-                                  class="flex items-center max-[500px]:justify-center md:justify-end max-md:mt-3 h-full">
-                                  <p
-                                      class="font-bold text-lg leading-8 text-gray-600 text-center transition-all duration-300 group-hover:text-rose-300">
-                                      Rp 86.000,00
-                                      <!-- Rp {{ number_format($item->product->price * $item->quantity, 2) }} -->
-                                  </p>
-                              </div>
-                          </div>
-                      </div>
-                      <!-- @php
-                          $totalPrice += $item->product->price * $item->quantity;
-                      @endphp
-                  @endforeach -->
-
-                  <div class="flex justify-end mt-4">
-                      <!-- <h3 class="font-bold text-xl">Total: Rp {{ number_format($totalPrice, 2) }}</h3> -->
-                      <h3 class="font-bold text-xl">Total: Rp 90.000,00</h3>
-                  </div>
+            <!-- Product Details Header -->
+            <div
+              class="grid grid-cols-12 mt-8 max-md:hidden pb-6 border-b border-gray-200"
+            >
+              <div class="col-span-12 md:col-span-7">
+                <p class="font-normal text-lg leading-8 text-gray-400">
+                  Product Details
+                </p>
               </div>
-               <!-- Cart List End -->
-
-
-               <!-- Detail Order Start -->
-              <div
-                  class="col-span-12 xl:col-span-4 bg-gray-50 w-full max-xl:px-6 max-w-3xl xl:max-w-lg mx-auto lg:pl-8 py-24">
-                  <h2 class="font-manrope font-bold text-3xl leading-10 text-black pb-8 border-b border-gray-300">
-                      Order Summary</h2>
-                  <div class="mt-8">
-                      <div class="flex items-center justify-between pb-6">
-                          <p class="font-normal text-lg leading-8 text-black">1 Items</p>
-                          <p class="font-medium text-lg leading-8 text-black">Rp 90.000,00
-                          </p>
-                      </div>
-
-                      <form action="{{ route('cart.checkCost') }}" method="POST">
-                          
-                           <!-- Kota Asal -->
-                          <label for="origin"
-                              class="flex items-center mb-1.5 text-gray-600 text-sm font-medium">Kota Asal</label>
-                          <div class="flex pb-6">
-                              <div class="relative w-full z-10">
-                                  <select name="origin" id="origin"
-                                      class="block w-full h-11 pr-10 pl-4 text-base font-normal
-                                      shadow-xs text-gray-900 bg-white border border-gray-300 rounded-lg focus:outline-gray-400"
-                                      readonly>
-                                          <option value="{{ $bogorCity['city_id'] }}" selected>
-                                            Makanan
-                                          </option>
-                                          <option value="">Data Kota Tidak Tersedia</option>
-                                  </select>
-                              </div>
-                          </div>
-
-                           <!-- Kota Tujuan Pemesanan -->
-                          <label for="destination"
-                              class="flex items-center mb-1.5 text-gray-600 text-sm font-medium">Pilih Kota Tujuan
-                          </label>
-                          <div class="flex pb-6">
-                              <div class="relative w-full z-10">
-                                  <select name="destination" id="destination"
-                                      class="block w-full h-11 pr-10 pl-4 text-base font-normal
-                              shadow-xs text-gray-900 bg-white border border-gray-300 rounded-lg focus:outline-gray-400"
-                                      required>
-                                      <option value="">Pilih Kota Tujuan</option>
-                                              <option value="{{ $city['city_id'] }}">Tempat
-                                              </option>
-                                          <option value="">Data Kota Tidak tersedia</option>
-                                  </select>
-                              </div>
-                          </div>
-
-                           <!-- Kurir untuk Pemesanan -->
-                          <label for="courier"
-                              class="flex items-center mb-1.5 text-gray-600 text-sm font-medium">Courier
-                          </label>
-                          <div class="flex pb-6">
-                              <div class="relative w-full z-10">
-                                  <select name="courier" id="courier"
-                                      class="block w-full h-11 pr-10 pl-4 text-base font-normal
-                              shadow-xs text-gray-900 bg-white border border-gray-300 rounded-lg focus:outline-gray-400"
-                                      required>
-                                      <option value="">Choose Courier</option>
-                                      <option value="jne">JNE</option>
-                                      <option value="pos">POS</option>
-                                      <option value="tiki">TIKI</option>
-                                  </select>
-                              </div>
-                          </div>
-
-
-                          <label class="flex items-center mb-1.5 text-gray-400 text-sm font-medium">Berat Paket
-                          </label>
-                          <div class="flex pb-4 w-full">
-                              <div class="relative w-full ">
-                                  <div class=" absolute left-0 top-0 py-2.5 px-4 text-gray-300">
-                                  </div>
-                                  <input type="number" name="weight" id="weight"
-                                      class="block w-full h-11 pr-11 pl-5 py-2.5 text-base font-normal shadow-xs text-gray-900 bg-white border border-gray-300 rounded-lg placeholder-gray-500 focus:outline-gray-400 "
-                                      placeholder="Berat paket">
-                              </div>
-                          </div>
-
-                           <!-- Tipe HP untuk produk Casing -->
-                          <label class="flex items-center mb-1.5 text-gray-400 text-sm font-medium">Tipe Handphone
-                          </label>
-                          <div class="flex pb-4 w-full">
-                              <div class="relative w-full ">
-                                  <div class=" absolute left-0 top-0 py-2.5 px-4 text-gray-300">
-                                  </div>
-                                  <input type="text" name="tipe_hp" id="tipe_hp"
-                                      class="block w-full h-11 pr-11 pl-5 py-2.5 text-base font-normal shadow-xs text-gray-900 bg-white border border-gray-300 rounded-lg placeholder-gray-500 focus:outline-gray-400 "
-                                      placeholder="Isi jika produk yang dibeli casing">
-                              </div>
-                          </div>
-
-                           <!-- Code Promo -->
-                          <label class="flex items-center mb-1.5 text-gray-400 text-sm font-medium">Code Promo
-                          </label>
-                          <div class="flex pb-4 w-full">
-                              <div class="relative w-full ">
-                                  <div class=" absolute left-0 top-0 py-2.5 px-4 text-gray-300">
-                                  </div>
-                                  <input type="text" name="code"
-                                      class="block w-full h-11 pr-11 pl-5 py-2.5 text-base font-normal shadow-xs text-gray-900 bg-white border border-gray-300 rounded-lg placeholder-gray-500 focus:outline-gray-400 "
-                                      placeholder="xxxx xxxx xxxx">
-                              </div>
-                          </div>
-
-                           <!-- Alamat -->
-                          <label class="flex items-center mb-1.5 text-gray-400 text-sm font-medium">Alamat
-                          </label>
-                          <div class="flex pb-4 w-full">
-                              <div class="relative w-full ">
-                                  <div class=" absolute left-0 top-0 py-2.5 px-4 text-gray-300">
-                                  </div>
-                                  <textarea id="alamat" name="alamat" rows="4"
-                                      class="block p-2.5 w-full text-sm text-gray-700 bg-gray-50 rounded-lg border border-gray-300 focus:border-rose-300 focus:outline-none"
-                                      placeholder="Mohon Berikan Alamat lengkap" required></textarea>
-                              </div>
-                          </div>
-
-                           <!-- Request Pesanan -->
-                          <label class="flex items-center mb-1.5 text-gray-400 text-sm font-medium">Masukkan Untuk
-                              Produk
-                          </label>
-                          <div class="flex pb-4 w-full">
-                              <div class="relative w-full ">
-                                  <div class=" absolute left-0 top-0 py-2.5 px-4 text-gray-300">
-                                  </div>
-                                  <textarea id="masukkan" name="masukkan" rows="4"
-                                      class="block p-2.5 w-full text-sm text-gray-700 bg-gray-50 rounded-lg border border-gray-300 focus:border-rose-300 focus:outline-none"
-                                      placeholder="Contoh: Request warna casing megamendung nya merah ya" required></textarea>
-                              </div>
-                          </div>
-
-
-                           <!-- Button Kirim -->
-                          <div class="flex items-center border-b border-gray-200">
-                              <input type="submit" name="checkCost"
-                                  class="rounded-lg w-full bg-rose-400 py-2.5 px-4 text-white text-sm font-semibold text-center mb-8 transition-all duration-500 hover:bg-rose-300">
-                          </div>
-                      </form>
-
-                       <!-- Order Sumarry End -->
-
-
-                       <!-- Apply Cost Start -->
-                      <div class="mt-5">
-                              <h4 class="mb-3 font-bold">Rincian Ongkir</h4>
-                              <h2 class="mb-3">
-                                  <ul>
-                                      
-                                          <li class="font-semibold">Asal Kota: <span
-                                                  class="font-light">Bogor</span>
-                                          </li>
-                                          <li class="font-semibold">Kota Tujuan: <span
-                                                  class="font-light">Bali</span>
-                                          </li>
-                                          <p class="text-gray-500">Detail kota asal atau tujuan belum
-                                              tersedia.
-                                          </p>
-
-                                      <li class="font-semibold">Berat Paket: <span
-                                              class="font-light">100 gram</span>
-                                      </li>
-                                  </ul>
-                              </h2>
-
-
-
-                                  <div>
-                                      <label for="name">Name: Syahid</label>
-
-                                          <div class="mb-3">
-                                              <label for="service">Service: Dine in</label>
-
-                                                  <div class="mb-3">
-                                                      <label for="value">
-                                                          Price: Rp 90.000,00
-                                                      </label>
-                                                  </div>
-                                          </div>
-                              </div>
+              <div class="col-span-12 md:col-span-5">
+                <div class="grid grid-cols-5">
+                  <div class="col-span-3">
+                    <p
+                      class="font-normal text-lg leading-8 text-gray-400 text-center"
+                    >
+                      Quantity
+                    </p>
                   </div>
-
-                      <div class="flex items-center justify-between mb-2">
-                           <!-- Tipe HP -->
-                          <p class="font-semibold text-slate-500 leading-8">Tipe HP</p>
-                          <p class="font-light text-xl leading-8 text-rose-300">
-                              </p>
-                      </div>
-                      <!-- <hr> -->
-
-                  <div class="flex items-center justify-between mb-2">
-                       <!-- Request Produk -->
-                      <p class="font-semibold text-slate-500 leading-8"></p>
-                      <p class="font-light text-base leading-8 text-rose-300">
-                          </p>
+                  <div class="col-span-2">
+                    <p
+                      class="font-normal text-lg leading-8 text-gray-400 text-center"
+                    >
+                      Total
+                    </p>
                   </div>
-                  <hr>
+                </div>
+              </div>
+            </div>
 
-                  <div class="flex items-center justify-between">
-                       <!-- Alamat User Ketika di Input -->
-                      <p class="font-semibold text-slate-500 leading-8 mb-2">Alamat</p>
-                      <p class="font-light text-base leading-8 text-rose-300">Kantor</p>
+            <!-- Product Item -->
+            <div
+              class="flex flex-col min-[500px]:flex-row min-[500px]:items-center gap-5 py-6 border-b border-gray-200 group"
+            >
+              <div class="w-full max-w-[126px] sm:justify-center">
+                <img
+                  src="./assets/png/food/1.png"
+                  alt=""
+                  class="mx-auto rounded-xl object-cover"
+                />
+              </div>
+              <div class="grid grid-cols-1 md:grid-cols-4 w-full">
+                <div class="md:col-span-2">
+                  <div class="flex flex-col max-[500px]:items-center gap-3">
+                    <h6 class="font-semibold text-base leading-7 text-black">
+                      Steak
+                    </h6>
+                    <h6 class="font-normal text-base leading-7 text-gray-500">
+                      Makanan
+                    </h6>
+                    <h6
+                      class="font-medium text-base leading-7 text-gray-600 transition-all duration-300 group-hover:text-rose-300"
+                    >
+                      Rp 86.000,00
+                    </h6>
                   </div>
-                  <hr>
-
-                  <div class="flex items-center justify-between mb-2">
-                       <!-- Promo -->
-                      <p class="font-semibold text-slate-500 leading-8">Promo</p>
-                      <p class="font-light text-xl leading-8 text-rose-300">Rp
-                          - 100</p>
-                  </div>
-                  <hr>
-
-                   <!-- Total Harga -->
-                  <div class="flex items-center justify-between py-8">
-                      <p class="font-medium text-xl leading-8 text-black">1 Items</p>
-                      <p class="font-semibold text-xl leading-8 text-rose-300">Rp
-                          100.000,00</p>
-                  </div>
-
-                  
-                      <h2 class="text-base text-rose-300">Promo Diaktifkan</h2>
-
-                  <form action="{{ route('submitPayment') }}" method="POST" enctype="multipart/form-data">
-                      <div class="mb-4">
-                          <label for="origin" class="block text-gray-700">Kota Asal:</label>
-                          <input type="text" name="origin_display"
-                              value=""
-                              class="input" disabled>
-                          <input type="hidden" name="origin"
-                              value="">
-                      </div>
-
-                      <div class="mb-4">
-                          <label for="destination" class="block text-gray-700">Kota Tujuan:</label>
-                          <input type="text" name="destination_display"
-                              value=""
-                              class="input" disabled>
-                          <input type="hidden" name="destination"
-                              value="">
-                      </div>
-
-                      <div class="mb-4">
-                          <label for="weight" class="block text-gray-700">Berat (gram):</label>
-                          <input type="text" name="weight_display" value=""
-                              class="input" disabled>
-                          <input type="hidden" name="weight" value="">
-                      </div>
-
-                      <div class="mb-4">
-                          <label for="alamat" class="block text-gray-700">Tipe HP:</label>
-                          <input type="text" name="tipe_hp_display" value=""
-                              class="input" disabled>
-                          <input type="hidden" name="tipe_hp" value="">
-                      </div>
-
-                      <div class="mb-4">
-                          <label for="alamat" class="block text-gray-700">Alamat:</label>
-                          <input type="text" name="alamat_display" value=""
-                              class="input" disabled>
-                          <input type="hidden" name="alamat" value="">
-                      </div>
-
-                      <div class="mb-4">
-                          <label for="alamat" class="block text-gray-700">Masukkan:</label>
-                          <input type="text" name="masukkan_display"
-                              value="" class="input" disabled>
-                          <input type="hidden" name="masukkan" value="">
-                      </div>
-
-                      <div class="mb-4">
-                          <label for="totalAll" class="block text-gray-700">Total Pembayaran:</label>
-                          <input type="text" name="total_all" id="totalAll"
-                              value="" class="input">
-                      </div>
-
-                      <div class="mb-4">
-                          <label for="bukti_pembayaran" class="block text-gray-700">Bukti Pembayaran:</label>
-                          <input type="file" name="bukti_pembayaran" class="input"
-                              accept=".jpg,.jpeg,.png,.pdf" required>
-                      </div>
-
+                </div>
+                <div
+                  class="flex items-center max-[500px]:justify-center h-full max-md:mt-3"
+                >
+                  <div class="flex items-center justify-center h-full">
+                    <form action="#" method="POST" style="display: inline">
+                      <input
+                        type="hidden"
+                        name="id"
+                        value="{{ $item->product->id }}"
+                      />
                       <button
-                          class="w-full text-center bg-rose-200 rounded-xl py-3 px-6 font-semibold text-lg text-white transition-all duration-500 hover:bg-rose-300"
-                          type="submit">Checkout</button>
-                  </form>
+                        type="submit"
+                        name="quantity"
+                        value="{{ $item->quantity - 1 }}"
+                        class="group rounded-l-xl px-5 py-[18px] border border-gray-200 flex items-center justify-center shadow-sm transition-all duration-500 hover:bg-gray-50 hover:border-gray-300 focus-within:outline-gray-300"
+                      >
+                        <svg
+                          class="stroke-gray-900 transition-all duration-500 group-hover:stroke-black"
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="22"
+                          height="22"
+                          viewBox="0 0 22 22"
+                          fill="none"
+                        >
+                          <path
+                            d="M16.5 11H5.5"
+                            stroke-width="1.6"
+                            stroke-linecap="round"
+                          />
+                        </svg>
+                      </button>
+                    </form>
+                    <input
+                      type="text"
+                      class="border-y border-gray-200 outline-none text-gray-900 font-semibold text-lg w-full max-w-[73px] min-w-[60px] text-center bg-transparent"
+                      value="2"
+                      readonly
+                    />
+                    <form
+                      action="{{ route('cart.update') }}"
+                      method="POST"
+                      style="display: inline"
+                    >
+                      <input
+                        type="hidden"
+                        name="id"
+                        value="{{ $item->product->id }}"
+                      />
+                      <button
+                        type="submit"
+                        name="quantity"
+                        value="{{ $item->quantity + 1 }}"
+                        class="group rounded-r-xl px-5 py-[18px] border border-gray-200 flex items-center justify-center shadow-sm transition-all duration-500 hover:bg-gray-50 hover:border-gray-300 focus-within:outline-gray-300"
+                      >
+                        <svg
+                          class="stroke-gray-900 transition-all duration-500 group-hover:stroke-black"
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="22"
+                          height="22"
+                          viewBox="0 0 22 22"
+                          fill="none"
+                        >
+                          <path
+                            d="M11 5.5V16.5M16.5 11H5.5"
+                            stroke-width="1.6"
+                            stroke-linecap="round"
+                          />
+                        </svg>
+                      </button>
+                    </form>
+                  </div>
+                </div>
+                <div
+                  class="flex items-center max-[500px]:justify-center md:justify-end max-md:mt-3 h-full"
+                >
+                  <p
+                    class="font-bold text-lg leading-8 text-gray-600 text-center transition-all duration-300 group-hover:text-rose-300"
+                  >
+                    Rp 86.000,00
+                  </p>
+                </div>
+              </div>
+            </div>
 
+            <!-- Total Price -->
+            <div class="flex justify-end mt-4">
+              <h3 class="font-bold text-xl">Total: Rp 90.000,00</h3>
+            </div>
+          </div>
+
+          <!-- Order Summary Section -->
+          <div
+            class="col-span-12 xl:col-span-4 bg-gray-50 w-full max-xl:px-6 max-w-3xl xl:max-w-lg mx-auto lg:pl-8 py-24"
+          >
+            <h2
+              class="font-manrope font-bold text-3xl leading-10 text-black pb-8 border-b border-gray-300"
+            >
+              Order Summary
+            </h2>
+
+            <!-- Order Details -->
+            <div class="mt-8">
+              <div class="flex items-center justify-between pb-6">
+                <p class="font-normal text-lg leading-8 text-black">1 Items</p>
+                <p class="font-medium text-lg leading-8 text-black">
+                  Rp 90.000,00
+                </p>
               </div>
 
+              <form action="{{ route('cart.checkCost') }}" method="POST">
+                <div class="relative">
+                  <!-- Nama -->
+                  <label for="nama" class="block mb-2 font-paprika text-base">
+                    Masukkan nama Anda
+                  </label>
+                  <input
+                    type="text"
+                    placeholder="contoh: Atas nama Rendi"
+                    class="w-full border border-gray-300 rounded-lg pr-16 px-3 py-3 font-alkatra font-normal focus:ring focus:ring-blue-200"
+                  />
 
-               <!-- jika cart kosong -->
-          
-              <p class="text-center font-semibold text-lg">Your cart is empty.</p>
+                  <!-- No Telp -->
+                  <label
+                    for="nama"
+                    class="block mt-4 mb-2 font-paprika text-base"
+                  >
+                    Masukkan nomor telepon
+                  </label>
+                  <input
+                    type="number"
+                    placeholder="contoh: +62"
+                    class="input-number w-full border border-gray-300 rounded-lg pr-16 px-3 py-3 font-alkatra font-normal focus:ring focus:ring-blue-200"
+                  />
 
-               <!-- Apply cost end -->
+                  <!-- Code Promo -->
+                  <label
+                    for="promo-code"
+                    class="block mt-4 mb-2 font-paprika text-base"
+                  >
+                    Kode Promo
+                  </label>
+                  <div class="relative mb-4">
+                    <input
+                      type="text"
+                      id="promo-code"
+                      placeholder="x5612"
+                      class="w-full border border-gray-300 rounded-lg pr-16 px-3 py-3 font-alkatra font-normal text-base focus:ring focus:ring-blue-200"
+                    />
+                    <button
+                      class="absolute h-full right-0 bg-black text-white font-alkatra px-3 py-1 rounded-r-lg transition duration-300 ease-in-out hover:opacity-80 focus:outline-none"
+                    >
+                      Submit
+                    </button>
+                  </div>
+
+                  <!-- File (Bukti Pembayaran) -->
+                  <div class="relative">
+                    <label
+                      for="file-upload"
+                      class="block mt-4 mb-2 font-paprika text-base"
+                    >
+                      Upload File
+                    </label>
+                    <div class="flex items-center space-x-2 mb-4">
+                      <label
+                        for="file-upload"
+                        class="flex bg-red-500 text-white gap-2 px-4 py-2 rounded-lg cursor-pointer font-paprika text-base hover:bg-red-600 transition duration-200 ease-in"
+                      >
+                        <i data-feather="upload"></i>
+                        Upload File
+                      </label>
+                      <span id="file-name" class="font-paprika text-xs"></span>
+                    </div>
+                    <input
+                      type="file"
+                      id="file-upload"
+                      class="hidden"
+                      onchange="updateFileName(this)"
+                    />
+                  </div>
+
+                  <!-- Catatan -->
+                  <label for="" class="block mt-4 mb-2 font-paprika text-base">
+                    Catatan
+                  </label>
+                  <div class="relative w-full flex items-center">
+                    <textarea
+                      name="message"
+                      id="message"
+                      rows="1"
+                      class="w-full border border-gray-300 rounded-lg px-3 py-3 mb-4 focus:ring focus:ring-blue-200 placeholder:px-10"
+                      placeholder="Masukkan"
+                    ></textarea>
+                    <svg
+                      width="32"
+                      height="32"
+                      viewBox="0 0 32 32"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="flex absolute left-2.5 top-2"
+                      id="notebook"
+                    >
+                      <path
+                        d="M23.3333 24.6667V27.3333C23.3333 27.5111 23.4 27.6667 23.5333 27.8C23.6667 27.9333 23.8222 28 24 28C24.1778 28 24.3333 27.9333 24.4667 27.8C24.6 27.6667 24.6667 27.5111 24.6667 27.3333V24.6667H27.3333C27.5111 24.6667 27.6667 24.6 27.8 24.4667C27.9333 24.3333 28 24.1778 28 24C28 23.8222 27.9333 23.6667 27.8 23.5333C27.6667 23.4 27.5111 23.3333 27.3333 23.3333H24.6667V20.6667C24.6667 20.4889 24.6 20.3333 24.4667 20.2C24.3333 20.0667 24.1778 20 24 20C23.8222 20 23.6667 20.0667 23.5333 20.2C23.4 20.3333 23.3333 20.4889 23.3333 20.6667V23.3333H20.6667C20.4889 23.3333 20.3333 23.4 20.2 23.5333C20.0667 23.6667 20 23.8222 20 24C20 24.1778 20.0667 24.3333 20.2 24.4667C20.3333 24.6 20.4889 24.6667 20.6667 24.6667H23.3333ZM24 30.6667C22.1556 30.6667 20.5836 30.0164 19.284 28.716C17.9844 27.4156 17.3342 25.8436 17.3333 24C17.3324 22.1564 17.9827 20.5844 19.284 19.284C20.5853 17.9836 22.1573 17.3333 24 17.3333C25.8427 17.3333 27.4151 17.9836 28.7173 19.284C30.0196 20.5844 30.6693 22.1564 30.6667 24C30.664 25.8436 30.0138 27.416 28.716 28.7173C27.4182 30.0187 25.8462 30.6684 24 30.6667ZM10.6667 12H21.3333C21.7111 12 22.028 11.872 22.284 11.616C22.54 11.36 22.6676 11.0436 22.6667 10.6667C22.6658 10.2898 22.5378 9.97333 22.2827 9.71733C22.0276 9.46133 21.7111 9.33333 21.3333 9.33333H10.6667C10.2889 9.33333 9.97244 9.46133 9.71733 9.71733C9.46222 9.97333 9.33422 10.2898 9.33333 10.6667C9.33244 11.0436 9.46044 11.3604 9.71733 11.6173C9.97422 11.8742 10.2907 12.0018 10.6667 12ZM6.66667 28C5.93333 28 5.30578 27.7391 4.784 27.2173C4.26222 26.6956 4.00089 26.0676 4 25.3333V6.66667C4 5.93333 4.26133 5.30578 4.784 4.784C5.30667 4.26222 5.93422 4.00089 6.66667 4H25.3333C26.0667 4 26.6947 4.26133 27.2173 4.784C27.74 5.30667 28.0009 5.93422 28 6.66667V13.9333C28 14.3333 27.8333 14.6444 27.5 14.8667C27.1667 15.0889 26.8111 15.1333 26.4333 15C26.0556 14.8889 25.6609 14.8053 25.2493 14.7493C24.8378 14.6933 24.4213 14.6658 24 14.6667C23.7556 14.6667 23.5276 14.6724 23.316 14.684C23.1044 14.6956 22.888 14.7231 22.6667 14.7667C22.4667 14.7222 22.2444 14.6947 22 14.684C21.7556 14.6733 21.5333 14.6676 21.3333 14.6667H10.6667C10.2889 14.6667 9.97244 14.7947 9.71733 15.0507C9.46222 15.3067 9.33422 15.6231 9.33333 16C9.33244 16.3769 9.46044 16.6938 9.71733 16.9507C9.97422 17.2076 10.2907 17.3351 10.6667 17.3333H17.5C17.1 17.7111 16.7391 18.1222 16.4173 18.5667C16.0956 19.0111 15.812 19.4889 15.5667 20H10.6667C10.2889 20 9.97244 20.128 9.71733 20.384C9.46222 20.64 9.33422 20.9564 9.33333 21.3333C9.33244 21.7102 9.46044 22.0271 9.71733 22.284C9.97422 22.5409 10.2907 22.6684 10.6667 22.6667H14.7667C14.7222 22.8889 14.6947 23.1058 14.684 23.3173C14.6733 23.5289 14.6676 23.7564 14.6667 24C14.6667 24.4444 14.6889 24.8667 14.7333 25.2667C14.7778 25.6667 14.8556 26.0556 14.9667 26.4333C15.0778 26.8111 15.0222 27.1667 14.8 27.5C14.5778 27.8333 14.2778 28 13.9 28H6.66667Z"
+                        fill="black"
+                        fill-opacity="0.34"
+                      />
+                    </svg>
+                  </div>
+                </div>
+                <!-- Submit Button -->
+                <div class="flex items-center border-b border-gray-200">
+                  <input
+                    type="submit"
+                    name="checkCost"
+                    class="rounded-lg w-full bg-rose-400 py-2.5 px-4 text-white text-sm font-semibold text-center mb-8 transition-all duration-500 hover:bg-rose-300"
+                  />
+                </div>
+              </form>
+
+              <!-- Shipping Details -->
+              <!-- <div class="mt-5">
+                <h4 class="mb-3 font-bold">Rincian Ongkir</h4>
+                <ul class="mb-3">
+                  <li class="font-semibold">
+                    Asal Kota: <span class="font-light">Bogor</span>
+                  </li>
+                  <li class="font-semibold">
+                    Kota Tujuan: <span class="font-light">Bali</span>
+                  </li>
+                  <p class="text-gray-500">
+                    Detail kota asal atau tujuan belum tersedia.
+                  </p>
+                  <li class="font-semibold">
+                    Berat Paket: <span class="font-light">100 gram</span>
+                  </li>
+                </ul>
+                Total Payment
+                <div class="flex items-center justify-between py-8">
+                  <p class="font-medium text-xl leading-8 text-black">
+                    1 Items
+                  </p>
+                  <p class="font-semibold text-xl leading-8 text-rose-300">
+                    Rp 100.000,00
+                  </p>
+                </div>
+              </div> -->
+            </div>
           </div>
-           <x-footer></x-footer> --}
+        </div>
+      </div>
+    </section>
+  </body>
+  <script src="./js/script.js"></script>
+  <script>
+    const textArea = document.querySelector("#message");
+    const noteBook = document.querySelector("#notebook");
 
-              </div>
-          </div>
-           <!-- Apply Cost End -->
-          <x-alert></x-alert>
-          <x-icon-j-s></x-icon-j-s>
-</body>
+    const toggleNoteBook = () => {
+      if (textArea.value.trim() === "") {
+        noteBook.classList.remove("hidden");
+      } else {
+        noteBook.classList.add("hidden");
+      }
+    };
 
+    textArea.addEventListener("focus", () => {
+      textArea.setAttribute("placeholder", "");
+      noteBook.classList.add("hidden");
+    });
+
+    textArea.addEventListener("blur", () => {
+      textArea.setAttribute("placeholder", "Masukkan");
+      toggleNoteBook();
+    });
+
+    textArea.addEventListener("input", toggleNoteBook);
+
+    feather.replace();
+  </script>
 </html>

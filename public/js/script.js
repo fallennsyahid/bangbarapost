@@ -61,9 +61,14 @@ window.onclick = (e) => {
     };
 };
 
-// window.onscroll = function () {
-//     itemDetailModal.style.display = 'none';
-// }
+// File Upload
+function updateFileName(input) {
+    const fileName = input.files[0]?.name || "Tidak ada file yang dipilih";
+    document.getElementById("file-name").textContent = fileName;
+}
+
+// Note
+
 
 
 const hamburger = document.getElementById('#hamburger');
