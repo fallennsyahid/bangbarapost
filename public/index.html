@@ -16,12 +16,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Alata&family=Alatsi&family=Alike&family=Alkatra:wght@400..700&family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Euphoria+Script&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Marmelad&family=Paprika&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Pontano+Sans:wght@300..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Protest+Riot&family=Qwigley&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Alatsi&family=Alike&family=Alkatra:wght@400..700&family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Euphoria+Script&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Marmelad&family=Paprika&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Pontano+Sans:wght@300..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Protest+Riot&family=Qwigley&display=swap"
       rel="stylesheet"
     />
 
     <!-- ICONS -->
     <script src="https://unpkg.com/feather-icons"></script>
+
+    <!-- FLOWBITE -->
+    <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
   </head>
   <body>
     <section id="navbarHeader" class="header-img">
@@ -99,6 +102,7 @@
           </p>
           <a
             href="#menu"
+            id="modal-button"
             class="font-protest text-lg text-white text-center bg-primary px-8 p-5 rounded-full shadow-md hover:shadow-xl hover:bg-yellow-600 transition duration-300 ease-in-out"
             >Cek Selengkapnya</a
           >
@@ -157,7 +161,7 @@
             >
               <div class="flex justify-center py-5 sm:py-1">
                 <div
-                  class="bg-white h-72 w-48 sm:h-80 sm:w-56 lg:h-96 lg:w-64 rounded-md flex flex-col items-center gap-3"
+                  class="bg-white h-[21rem] w-48 sm:h-80 sm:w-56 lg:h-96 lg:w-64 rounded-md flex flex-col items-center gap-3"
                 >
                   <a href="" id="item-modal-button" class="item-detail-button">
                     <div class="relative group">
@@ -175,7 +179,7 @@
                       </div>
                     </div>
                   </a>
-                  <p class="text-text text-sm font-marmelad text-center">
+                  <p class="text-text text-base font-marmelad text-center">
                     Steak Tenderloin Meltique
                   </p>
                   <span class="text-price font-alkatra text-sm text-center">
@@ -183,7 +187,7 @@
                   </span>
                   <a
                     href=""
-                    class="font-marmelad text-sm sm:text-sm bg-[#BF0000] px-2 py-1 sm:px-4 sm:py-2 rounded-full text-white w-full sm:w-auto text-center"
+                    class="font-marmelad text-sm sm:text-sm bg-[#BF0000] px-2 py-1 sm:px-4 sm:py-2 rounded-full text-white text-center"
                   >
                     Tambahkan Ke Keranjang
                   </a>
