@@ -40,47 +40,8 @@ module.exports = {
         'Segoe UI Symbol',
         'Noto Color Emoji'
       ],
-      'fraunces': [
-        'Fraunces', 'sans-serif'
-      ],
       'europhia': [
         'Euphoria Script', 'sans-serif',
-      ],
-      'protest': [
-        'Protest Riot', 'sans-serif',
-      ],
-      'qwigley': [
-        'Qwigley', 'sans-serif',
-      ],
-      'alike': [
-        'Alike', 'sans-serif',
-      ],
-      'alkatra': [
-        'Alkatra', 'sans-serif',
-      ],
-      'marmelad': [
-        'Marmelad', 'sans-serif',
-      ],
-      'amiri': [
-        'Amiri', 'sans-serif',
-      ],
-      'alatsi': [
-        'Alatsi', 'sans-serif'
-      ],
-      'alata': [
-        'Alata', 'sans-serif',
-      ],
-      'paprika': [
-        'Paprika', 'sans-serif',
-      ],
-      'jakarta': [
-        'Plus Jakarta Sans', 'sans-serif',
-      ],
-      'pontanto': [
-        'Pontanto Sans', 'sans-serif',
-      ],
-      'inter': [
-        'Inter', 'sans-serif',
       ],
     },
     extend: {

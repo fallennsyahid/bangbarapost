@@ -61,26 +61,6 @@ window.onclick = (e) => {
     };
 };
 
-// const modalEl = document.querySelector('#info-popup');
-// const buttonModals = document.querySelectorAll('.modal-button'); // Semua tombol dengan class 'modal-button'
-
-// buttonModals.forEach((btn) => {
-//     // btn.onclick = (e) => {
-//     //     modalEl.style.display = 'flex';
-//     //     e.preventDefault();
-//     // };
-//     btn.addEventListener('click', (e) => {
-//         modalEl.classList.add('flex');
-//         e.preventDefault;
-//     })
-// });
-
-document.querySelector('#close-modal5').onclick = (e) => {
-    modalEl.style.display = 'none';
-    e.preventDefault();
-};
-
-
 // File Upload
 function updateFileName(input) {
     const fileName = input.files[0]?.name || "Tidak ada file yang dipilih";
@@ -90,13 +70,15 @@ function updateFileName(input) {
 // Note
 
 
+// Hamburger Menu
+const hamburger = document.querySelector('#hamburger');
+const navMenu = document.querySelector('#navbar');
 
-const hamburger = document.getElementById('#hamburger');
-const navMenu = document.getElementById('#nav-menu');
-
-hamburger.addEventListener('click', () => {
+hamburger.addEventListener('click', function () {
+    hamburger.classList.toggle('hamburger-active');
     navMenu.classList.toggle('hidden');
 });
+
 
 
 

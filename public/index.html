@@ -16,21 +16,35 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Alata&family=Alatsi&family=Alike&family=Alkatra:wght@400..700&family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Euphoria+Script&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Marmelad&family=Paprika&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Pontano+Sans:wght@300..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Protest+Riot&family=Qwigley&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Euphoria+Script&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
 
     <!-- ICONS -->
     <script src="https://unpkg.com/feather-icons"></script>
-
-    <!-- FLOWBITE -->
-    <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
   </head>
   <body>
     <section id="navbarHeader" class="header-img">
       <!-- Navbar Start -->
+      <button
+        id="hamburger"
+        name="hamburger"
+        type="button"
+        class="block absolute right-4 lg:block"
+      >
+        <span
+          class="hamburger-line transition duration-300 ease-in-out origin-top-left"
+        >
+        </span>
+        <span class="hamburger-line transition duration-300 ease-in-out">
+        </span>
+        <span
+          class="hamburger-line transition duration-300 ease-in-out origin-bottom-left"
+        >
+        </span>
+      </button>
       <nav
-        class="flex items-center justify-between px-6 py-4 bg-transparent"
+        class="hidden lg:flex items-center justify-between px-6 py-4 bg-white lg:bg-transparent absolute top-16 right-4 z-50 lg:relative lg:top-0 lg:left-auto lg:right-auto lg:z-auto"
         id="navbar"
       >
         <div>
@@ -39,25 +53,9 @@
               src="assets/svg/logo-navbar.svg"
               alt="Logo Navbar"
               width="150px"
-          /></a>
+            />
+          </a>
         </div>
-        <button
-          id="hamburger"
-          name="hamburger"
-          type="button"
-          class="block absolute right-4 lg:hidden"
-        >
-          <span
-            class="hamburger-line transition duration-300 ease-in-out origin-top-left"
-          >
-          </span>
-          <span class="hamburger-line transition duration-300 ease-in-out">
-          </span>
-          <span
-            class="hamburger-line transition duration-300 ease-in-out origin-bottom-left"
-          >
-          </span>
-        </button>
         <div class="text-white cursor-default">
           <a
             href="#navbarHeader"
@@ -86,14 +84,14 @@
           /></a>
         </div>
       </nav>
-      <!-- Navbar -->
+      <!-- Navbar End -->
 
       <div class="container">
         <div class="py-24 px-20">
           <h1 class="text-white text-7xl pb-6 font-europhia">
             Rasa Juara, Harga Bersahabat!
           </h1>
-          <p class="text-white font-fraunces text-lg max-w-[33rem] pb-16">
+          <p class="text-white font-normal text-lg max-w-[33rem] pb-16">
             Bangbara hadir untuk Anda yang menginginkan sajian steak berkualitas
             dengan cita rasa juara, namun tetap ramah di kantong. Dengan bahan
             pilihan dan racikan khas, setiap hidangan kami dirancang untuk
@@ -103,7 +101,7 @@
           <a
             href="#menu"
             id="modal-button"
-            class="font-protest text-lg text-white text-center bg-primary px-8 p-5 rounded-full shadow-md hover:shadow-xl hover:bg-yellow-600 transition duration-300 ease-in-out"
+            class="font-europhia text-2xl text-shadow text-white text-center bg-primary px-8 p-5 rounded-full shadow-md hover:shadow-xl hover:bg-yellow-400 transition duration-300 ease-in-out"
             >Cek Selengkapnya</a
           >
         </div>
@@ -116,32 +114,34 @@
       <div class="flex flex-col items-center px-4 sm:px-8 lg:px-16">
         <!-- Header -->
         <div
-          class="flex items-center bg-primary mx-auto my-5 py-2 px-8 sm:px-12 lg:px-16 text-center rounded-2xl shadow-md shadow-primary"
+          class="flex items-center bg-primary mx-auto my-5 px-8 sm:px-12 lg:px-16 text-center rounded-2xl shadow-md shadow-primary"
         >
-          <img src="assets/svg/book.svg" alt="" width="80px" class="mr-4" />
-          <h1 class="font-qwigley text-4xl sm:text-5xl lg:text-6xl text-white">
+          <img src="assets/svg/book.svg" alt="" width="120px" class="mr-4" />
+          <h1
+            class="font-europhia text-shadow text-4xl sm:text-5xl lg:text-6xl text-white"
+          >
             Menu Kami
           </h1>
         </div>
 
         <!-- Tab Navigation -->
         <div class="w-full py-6 text-center">
-          <div class="flex flex-wrap justify-center gap-x-8 gap-y-4">
+          <div class="flex flex-wrap justify-center gap-x-14 gap-y-4">
             <button
               onclick="changeSlide(0)"
-              class="menu-link relative text-white font-qwigley text-3xl sm:text-4xl lg:text-5xl hover:text-yellow-400 after:absolute after:left-0 after:bottom-0 after:h-[2px] after:rounded-full after:w-full after:bg-white hover:after:bg-yellow-400 active"
+              class="menu-link relative text-white font-europhia text-3xl sm:text-4xl lg:text-5xl hover:text-yellow-400 after:absolute after:left-0 after:bottom-0 after:h-[2px] after:rounded-full after:w-full after:bg-white hover:after:bg-yellow-400 active"
             >
               Makanan
             </button>
             <button
               onclick="changeSlide(1)"
-              class="menu-link relative text-white font-qwigley text-3xl sm:text-4xl lg:text-5xl hover:text-yellow-400 after:absolute after:left-0 after:bottom-0 after:h-[2px] after:rounded-full after:w-full after:bg-white hover:after:bg-yellow-400"
+              class="menu-link relative text-white font-europhia text-3xl sm:text-4xl lg:text-5xl hover:text-yellow-400 after:absolute after:left-0 after:bottom-0 after:h-[2px] after:rounded-full after:w-full after:bg-white hover:after:bg-yellow-400"
             >
               Minuman
             </button>
             <button
               onclick="changeSlide(2)"
-              class="menu-link relative text-white font-qwigley text-3xl sm:text-4xl lg:text-5xl hover:text-yellow-400 after:absolute after:left-0 after:bottom-0 after:h-[2px] after:rounded-full after:w-full after:bg-white hover:after:bg-yellow-400"
+              class="menu-link relative text-white font-europhia text-3xl sm:text-4xl lg:text-5xl hover:text-yellow-400 after:absolute after:left-0 after:bottom-0 after:h-[2px] after:rounded-full after:w-full after:bg-white hover:after:bg-yellow-400"
             >
               Extra
             </button>
@@ -179,7 +179,7 @@
                       </div>
                     </div>
                   </a>
-                  <p class="text-text text-base font-marmelad text-center">
+                  <p class="text-text text-base text-center">
                     Steak Tenderloin Meltique
                   </p>
                   <span class="text-price font-alkatra text-sm text-center">
@@ -187,7 +187,7 @@
                   </span>
                   <a
                     href=""
-                    class="font-marmelad text-sm sm:text-sm bg-[#BF0000] px-2 py-1 sm:px-4 sm:py-2 rounded-full text-white text-center"
+                    class="text shadow text-sm sm:text-sm bg-[#BF0000] px-2 py-1 sm:px-4 sm:py-2 rounded-full text-white text-center"
                   >
                     Tambahkan Ke Keranjang
                   </a>
@@ -313,7 +313,6 @@
         </div>
       </div>
     </section>
-
     <!-- Menu Section End -->
 
     <!-- About Section Start -->
@@ -326,7 +325,7 @@
             Tentang Kami
           </h1>
           <p
-            class="font-fraunces text-base sm:text-lg lg:text-xl font-medium text-white px-4 sm:px-8 lg:px-14 max-w-[28rem] sm:max-w-[40rem] lg:max-w-[45rem]"
+            class="text-base sm:text-lg lg:text-xl font-normal text-shadow text-white px-4 sm:px-8 lg:px-14 max-w-[28rem] sm:max-w-[40rem] lg:max-w-[45rem]"
           >
             Bangbara adalah tempat makan yang menghadirkan steak dan chicken
             katsu dengan cita rasa istimewa. Dengan bahan berkualitas dan harga
@@ -357,30 +356,30 @@
                 <input
                   type="email"
                   placeholder="Email"
-                  class="p-4 rounded-xl h-12 font-alkatra flex-1 border-2 border-solid border-orange-400 focus:outline-none focus:border-red-500 focus:shadow-xl placeholder:text-[#827E7E] placeholder:font-medium"
+                  class="p-4 rounded-xl h-12 flex-1 border-2 border-solid border-orange-400 focus:outline-none focus:border-red-500 focus:shadow-xl placeholder:text-[#827E7E] placeholder:font-normal placeholder:text-2xl placeholder:font-europhia"
                 />
                 <input
                   type="number"
                   placeholder="No. Telepon"
-                  class="input-number p-4 rounded-xl h-12 font-alkatra flex-1 border-2 border-solid border-orange-400 focus:outline-none focus:border-red-500 focus:shadow-xl placeholder:text-[#827E7E] placeholder:font-medium"
+                  class="input-number p-4 rounded-xl h-12 flex-1 border-2 border-solid border-orange-400 focus:outline-none focus:border-red-500 focus:shadow-xl placeholder:text-[#827E7E] placeholder:font-medium placeholder:text-2xl placeholder:font-europhia"
                 />
               </div>
               <div class="mt-5">
                 <input
                   type="text"
                   placeholder="Nama"
-                  class="p-4 rounded-xl h-12 font-alkatra w-full border-2 border-solid text-center border-orange-400 focus:outline-none focus:border-red-500 focus:shadow-xl placeholder:text-[#827E7E] placeholder:font-medium"
+                  class="p-4 rounded-xl h-12 w-full border-2 border-solid text-center border-orange-400 focus:outline-none focus:border-red-500 focus:shadow-xl placeholder:text-[#827E7E] placeholder:font-medium placeholder:text-2xl placeholder:font-europhia"
                 />
                 <textarea
                   name="message"
                   id="message"
                   rows="5"
-                  class="mt-5 p-4 w-full rounded-xl font-alkatra border-2 border-solid border-orange-400 focus:outline-none focus:border-red-500 focus:shadow-xl placeholder:text-[#827E7E] placeholder:font-medium"
+                  class="mt-5 p-4 w-full rounded-xl border-2 border-solid border-orange-400 focus:outline-none focus:border-red-500 focus:shadow-xl placeholder:text-[#827E7E] placeholder:font-medium placeholder:text-2xl placeholder:font-europhia"
                   placeholder="Pesan:"
                 ></textarea>
                 <button
                   type="submit"
-                  class="flex mt-4 px-6 py-4 bg-red-600 justify-center items-center shadow-2xl w-full text-white font-alkatra font-medium text-xl rounded-3xl transition duration-300 ease-in-out hover:bg-red-700 hover:scale-105 active:opacity-80 active:scale-100"
+                  class="flex mt-4 px-6 py-4 bg-red-600 justify-center items-center shadow-2xl w-full text-white font-bold text-xl rounded-3xl transition duration-300 ease-in-out hover:bg-red-700 hover:scale-105 active:opacity-80 active:scale-100"
                 >
                   Kirim Pesan
                 </button>
@@ -420,7 +419,7 @@
 
           <!-- Account -->
           <div class="w-full sm:w-auto text-center">
-            <h3 class="font-amiri text-white text-xl pb-3">Account</h3>
+            <h3 class="font-medium text-white text-xl pb-3">Account</h3>
             <div class="flex justify-center gap-4">
               <a href="https://wa.me/+6283857185413" target="_blank">
                 <img
@@ -455,11 +454,11 @@
 
           <!-- Contact -->
           <div class="w-full sm:w-auto text-center">
-            <h3 class="font-amiri text-white text-xl pb-3">Kontak</h3>
+            <h3 class="font-bold text-white text-xl pb-3">Kontak</h3>
             <a
               href="https://wa.me/+6283857185413"
               target="_blank"
-              class="font-amiri text-white text-lg hover:underline"
+              class="font-normal text-white text-lg hover:underline"
             >
               0838-5718-5413
             </a>
@@ -467,7 +466,7 @@
 
           <!-- Maps -->
           <div class="w-full sm:w-auto text-center">
-            <h3 class="font-amiri text-white text-xl pb-3">Maps</h3>
+            <h3 class="font-bold text-white text-xl pb-3">Maps</h3>
             <a
               href="https://maps.app.goo.gl/QJJSghdQJtVT7pj77"
               target="_blank"
@@ -476,8 +475,8 @@
               <img
                 src="assets/svg/maps.svg"
                 alt="Google Maps"
-                width="100px"
-                class="h-12 transition duration-300 ease-in-out hover:scale-110"
+                width=""
+                class="h-16 transition duration-300 ease-in-out hover:scale-110"
               />
             </a>
           </div>
@@ -489,16 +488,16 @@
     <!-- POPUP START -->
     <section id="popup">
       <div
-        class="hidden fixed z-[9999] left-0 top-0 w-full h-full overflow-auto justify-center items-center bg-[rgba(0,0,0,0.6)]"
+        class="hidden fixed z-[9999] left-0 top-0 w-full h-full overflow-auto flex justify-center items-center bg-[rgba(0,0,0,0.6)]"
         id="item-detail-modal"
         name="modal"
       >
         <div
-          class="flex flex-col bg-white h-3/4 w-1/4 rounded-lg gap-2"
+          class="flex flex-col bg-white h-3/4 w-[90%] md:w-1/2 lg:w-1/3 xl:w-1/4 rounded-lg gap-2"
           name="modal-container"
         >
           <a
-            href=""
+            href="#"
             class="close-icon absolute bg-white w-8 h-8 m-2 rounded-full flex items-center justify-center hover:scale-125 hover:rotate-90 transition duration-300"
           >
             <svg
@@ -520,20 +519,20 @@
           <img
             src="./assets/png/food/1.png"
             alt="Food"
-            width=""
-            class="overflow-hidden rounded-t-lg"
+            class="rounded-t-lg overflow-hidden"
           />
           <h1 class="text-center font-alatsi text-2xl pb-2">Product 1</h1>
-          <p class="text-center font-alatsi text-base">
+          <p class="text-center font-alatsi text-base px-4">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error
             tenetur vitae ducimus facilis non obcaecati veniam dolore, esse
             consectetur fuga.
           </p>
           <a
-            href=""
-            class="bg-[#BF0000] px-4 py-2 font-marmelad text-white rounded-md my-4 mx-4 text-center"
-            >Tambahkan Ke Keranjang</a
+            href="#"
+            class="bg-[#BF0000] px-4 py-2 font-marmelad text-white rounded-md my-4 mx-auto w-3/4 text-center"
           >
+            Tambahkan Ke Keranjang
+          </a>
         </div>
       </div>
     </section>
