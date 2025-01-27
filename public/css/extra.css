@@ -22,6 +22,12 @@
   background-color: #facc15;
 }
 
+.history-menu.active {
+  background-color: #ffc600 !important;
+  color: black !important; /* Perubahan warna teks untuk tombol aktif */
+  font-weight: 500;
+}
+
 .header-img {
   background-image: url("../assets/png/header.png");
   background-size: cover;
@@ -43,10 +49,18 @@
   min-height: 100vh;
 }
 
+.cart-img {
+  background-image: url("../assets/png/cart.png");
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+}
+
 .input-number::-webkit-outer-spin-button,
 .input-number::-webkit-inner-spin-button {
   appearance: none;
   margin: 0;
+  padding: 0;
 }
 
 .animation {
@@ -67,4 +81,8 @@
 
 .text-shadow {
   text-shadow: 0 4px 4px black;
+}
+
+.text-shadow-2 {
+  text-shadow: 0 3px 3px gray;
 }

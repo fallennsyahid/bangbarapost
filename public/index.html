@@ -24,90 +24,167 @@
     <script src="https://unpkg.com/feather-icons"></script>
   </head>
   <body>
-    <section id="navbarHeader" class="header-img">
-      <!-- Navbar Start -->
-      <button
-        id="hamburger"
-        name="hamburger"
-        type="button"
-        class="block absolute right-4 lg:block"
-      >
-        <span
-          class="hamburger-line transition duration-300 ease-in-out origin-top-left"
-        >
-        </span>
-        <span class="hamburger-line transition duration-300 ease-in-out">
-        </span>
-        <span
-          class="hamburger-line transition duration-300 ease-in-out origin-bottom-left"
-        >
-        </span>
-      </button>
-      <nav
-        class="hidden lg:flex items-center justify-between px-6 py-4 bg-white lg:bg-transparent absolute top-16 right-4 z-50 lg:relative lg:top-0 lg:left-auto lg:right-auto lg:z-auto"
-        id="navbar"
-      >
-        <div>
-          <a href="#navbarHeader">
-            <img
-              src="assets/svg/logo-navbar.svg"
-              alt="Logo Navbar"
-              width="150px"
-            />
-          </a>
-        </div>
-        <div class="text-white cursor-default">
-          <a
-            href="#navbarHeader"
-            class="inline-block text-lg mx-4 my-0 hover:text-primary relative after:block after:content-[''] after:w-10 after:mx-auto after:h-1 after:bg-white after:scale-x-0 hover:after:scale-x-100 after:origin-center after:transition-transform hover:after:scale-50 after:rounded-full"
-            >Home</a
-          >
-          <a
-            href="#menu"
-            class="inline-block text-lg mx-4 my-0 hover:text-primary relative after:block after:content-[''] after:w-10 after:mx-auto after:h-1 after:bg-white after:scale-x-0 hover:after:scale-x-100 after:origin-center after:transition-transform hover:after:scale-50 after:rounded-full"
-            >Menu</a
-          >
-          <a
-            href="#about"
-            class="inline-block text-lg mx-4 my-0 hover:text-primary relative after:block after:content-[''] after:w-10 after:mx-auto after:h-1 after:bg-white after:scale-x-0 hover:after:scale-x-105 after:origin-center after:transition-transform hover:after:scale-50 after:rounded-full"
-            >About</a
-          >
-          <a
-            href="#contact"
-            class="inline-block text-lg mx-4 my-0 hover:text-primary relative after:block after:content-[''] after:w-10 after:mx-auto after:h-1 after:bg-white after:scale-x-0 hover:after:scale-x-150 after:origin-center after:transition-transform hover:after:scale-50 after:rounded-full"
-            >Contact</a
-          >
-        </div>
-        <div>
-          <a href="shoppingCart.html"
-            ><img src="assets/svg/cart.svg" alt="Cart" width="40px"
-          /></a>
-        </div>
-      </nav>
-      <!-- Navbar End -->
+    <!-- Header Start -->
+    <header
+      class="bg-transparent absolute top-0 left-0 w-full flex items-center z-10"
+    >
+      <div class="container mx-auto px-4">
+        <div class="flex items-center justify-between">
+          <!-- Logo -->
+          <div class="py-6">
+            <a href="#home">
+              <img
+                src="./assets/svg/logo-navbar.svg"
+                alt="Logo"
+                width="150px"
+              />
+            </a>
+          </div>
 
-      <div class="container">
-        <div class="py-24 px-20">
-          <h1 class="text-white text-7xl pb-6 font-europhia">
-            Rasa Juara, Harga Bersahabat!
-          </h1>
-          <p class="text-white font-normal text-lg max-w-[33rem] pb-16">
-            Bangbara hadir untuk Anda yang menginginkan sajian steak berkualitas
-            dengan cita rasa juara, namun tetap ramah di kantong. Dengan bahan
-            pilihan dan racikan khas, setiap hidangan kami dirancang untuk
-            memberikan pengalaman makan yang lezat dan memuaskan, tanpa harus
-            menguras dompet.
-          </p>
-          <a
-            href="#menu"
-            id="modal-button"
-            class="font-europhia text-2xl text-shadow text-white text-center bg-primary px-8 p-5 rounded-full shadow-md hover:shadow-xl hover:bg-yellow-400 transition duration-300 ease-in-out"
-            >Cek Selengkapnya</a
-          >
+          <!-- Navigation and Controls -->
+          <div class="flex items-center">
+            <!-- Navigation Menu -->
+            <nav
+              id="nav-menu"
+              class="hidden absolute top-full right-4 py-5 bg-transparent backdrop-blur-xl shadow-2xl rounded-lg max-w-[250px] w-full lg:static lg:block lg:max-w-none lg:shadow-none lg:rounded-none lg:w-auto lg:mx-auto"
+            >
+              <ul class="block lg:flex lg:gap-8">
+                <li class="group">
+                  <a
+                    href="#home"
+                    class="text-base text-white py-2 mx-4 flex font-medium relative group-hover:text-primary after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-300 after:transform after:-translate-x-1/2 group-hover:after:w-3/4"
+                  >
+                    Home
+                  </a>
+                </li>
+                <li class="group">
+                  <a
+                    href="#menu"
+                    class="text-base text-white py-2 mx-4 flex font-medium relative group-hover:text-primary after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-300 after:transform after:-translate-x-1/2 group-hover:after:w-3/4"
+                  >
+                    Menu
+                  </a>
+                </li>
+                <li class="group">
+                  <a
+                    href="#about"
+                    class="text-base text-white py-2 mx-4 flex font-medium relative group-hover:text-primary after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-300 after:transform after:-translate-x-1/2 group-hover:after:w-3/4"
+                  >
+                    About
+                  </a>
+                </li>
+                <li class="group">
+                  <a
+                    href="#contact"
+                    class="text-base text-white py-2 mx-4 flex font-medium relative group-hover:text-primary after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-300 after:transform after:-translate-x-1/2 group-hover:after:w-3/4"
+                  >
+                    Contact
+                  </a>
+                </li>
+              </ul>
+            </nav>
+
+            <!-- Cart and Hamburger Menu -->
+            <div class="flex items-center space-x-4 lg:hidden">
+              <!-- Clock Icon -->
+              <a href="history.html">
+                <img
+                  src="./assets/svg/clock.svg"
+                  alt=""
+                  width="35px"
+                  class="hover:scale-110 transition duration-300 ease-in-out"
+                />
+              </a>
+
+              <!-- Cart Icon -->
+              <a href="shoppingCart.html">
+                <img
+                  src="./assets/svg/cart.svg"
+                  alt="Cart"
+                  width="40px"
+                  class="hover:scale-110 transition duration-300 ease-in-out"
+                />
+              </a>
+
+              <!-- Hamburger Menu -->
+              <button
+                id="hamburger"
+                name="hamburger"
+                type="button"
+                class="block"
+              >
+                <span
+                  class="hamburger-line block w-6 h-1 bg-white transition duration-300 ease-in-out origin-top-left mb-1"
+                ></span>
+                <span
+                  class="hamburger-line block w-6 h-1 bg-white transition duration-300 ease-in-out mb-1"
+                ></span>
+                <span
+                  class="hamburger-line block w-6 h-1 bg-white transition duration-300 ease-in-out origin-bottom-left"
+                ></span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Cart and Clock Icon (Desktop Only) -->
+          <div class="hidden lg:flex lg:items-center lg:space-x-4">
+            <!-- Clock Icon -->
+            <a href="history.html">
+              <img
+                src="./assets/svg/clock.svg"
+                alt=""
+                width="35px"
+                class="hover:scale-110 transition duration-300 ease-in-out"
+              />
+            </a>
+
+            <!-- Cart Icon -->
+            <a href="shoppingCart.html">
+              <img
+                src="./assets/svg/cart.svg"
+                alt="Cart"
+                width="40px"
+                class="hover:scale-110 transition duration-300 ease-in-out"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Header End -->
+
+    <!-- Hero Section Start -->
+    <section id="home" class="pt-36 header-img bg-cover bg-center">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-wrap items-center">
+          <!-- Konten -->
+          <div class="w-full lg:w-3/4 px-4 text-center lg:text-left">
+            <h1
+              class="font-europhia text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl mt-4 mb-6 leading-tight"
+            >
+              Rasa Juara, Harga Bersahabat!
+            </h1>
+            <p
+              class="font-medium text-secondary mb-10 leading-relaxed text-white text-sm sm:text-base md:text-lg lg:text-xl lg:w-3/4"
+            >
+              Bangbara hadir untuk Anda yang menginginkan sajian steak
+              berkualitas dengan cita rasa juara, namun tetap ramah di kantong.
+              Dengan bahan pilihan dan racikan khas, setiap hidangan kami
+              dirancang untuk memberikan pengalaman makan yang lezat dan
+              memuaskan, tanpa harus menguras dompet.
+            </p>
+
+            <a
+              href="#menu"
+              class="text-base sm:text-lg md:text-xl lg:text-2xl font-europhia text-white bg-primary py-3 px-6 md:py-4 md:px-8 rounded-full shadow-lg hover:shadow-xl hover:opacity-80 transition duration-300 ease-in-out"
+              >Cek Selengkapnya</a
+            >
+          </div>
         </div>
       </div>
     </section>
-    <!-- Hero Section End -->
+    <!-- Hero Sectio End -->
 
     <!-- Menu Section Start -->
     <section id="menu" class="menu-img">
@@ -356,25 +433,25 @@
                 <input
                   type="email"
                   placeholder="Email"
-                  class="p-4 rounded-xl h-12 flex-1 border-2 border-solid border-orange-400 focus:outline-none focus:border-red-500 focus:shadow-xl placeholder:text-[#827E7E] placeholder:font-normal placeholder:text-2xl placeholder:font-europhia"
+                  class="p-4 rounded-xl h-12 flex-1 border-2 border-solid border-red-500 focus:border-red-600 focus:shadow-xl focus:ring-0 placeholder:text-[#827E7E] placeholder:text-2xl placeholder:font-europhia"
                 />
                 <input
                   type="number"
                   placeholder="No. Telepon"
-                  class="input-number p-4 rounded-xl h-12 flex-1 border-2 border-solid border-orange-400 focus:outline-none focus:border-red-500 focus:shadow-xl placeholder:text-[#827E7E] placeholder:font-medium placeholder:text-2xl placeholder:font-europhia"
+                  class="input-number p-4 rounded-xl h-12 flex-1 border-2 border-solid border-red-500 focus:outline-none focus:border-red-600 focus:shadow-xl focus:ring-0 placeholder:text-[#827E7E] placeholder:text-2xl placeholder:font-europhia"
                 />
               </div>
               <div class="mt-5">
                 <input
                   type="text"
                   placeholder="Nama"
-                  class="p-4 rounded-xl h-12 w-full border-2 border-solid text-center border-orange-400 focus:outline-none focus:border-red-500 focus:shadow-xl placeholder:text-[#827E7E] placeholder:font-medium placeholder:text-2xl placeholder:font-europhia"
+                  class="p-4 rounded-xl h-12 w-full border-2 border-solid text-center border-red-500 focus:outline-none focus:border-red-600 focus:shadow-xl focus:ring-0 placeholder:text-[#827E7E] placeholder:text-2xl placeholder:font-europhia"
                 />
                 <textarea
                   name="message"
                   id="message"
                   rows="5"
-                  class="mt-5 p-4 w-full rounded-xl border-2 border-solid border-orange-400 focus:outline-none focus:border-red-500 focus:shadow-xl placeholder:text-[#827E7E] placeholder:font-medium placeholder:text-2xl placeholder:font-europhia"
+                  class="mt-5 p-4 w-full rounded-xl border-2 border-solid border-red-500 focus:outline-none focus:border-red-600 focus:shadow-xl focus:ring-0 placeholder:text-[#827E7E] placeholder:text-2xl placeholder:font-europhia"
                   placeholder="Pesan:"
                 ></textarea>
                 <button
@@ -488,7 +565,7 @@
     <!-- POPUP START -->
     <section id="popup">
       <div
-        class="hidden fixed z-[9999] left-0 top-0 w-full h-full overflow-auto flex justify-center items-center bg-[rgba(0,0,0,0.6)]"
+        class="hidden fixed z-[9999] left-0 top-0 w-full h-full overflow-auto justify-center items-center bg-[rgba(0,0,0,0.6)]"
         id="item-detail-modal"
         name="modal"
       >
@@ -519,6 +596,7 @@
           <img
             src="./assets/png/food/1.png"
             alt="Food"
+            width=""
             class="rounded-t-lg overflow-hidden"
           />
           <h1 class="text-center font-alatsi text-2xl pb-2">Product 1</h1>

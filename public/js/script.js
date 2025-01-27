@@ -1,14 +1,36 @@
-// Navbar Fixed 
+// Navbar Fixed
 window.onscroll = function () {
-    const navbarNav = document.querySelector('#navbar');
-    const fixedNav = navbarNav.offsetTop;
+    const header = document.querySelector('header');
+    const fixedNav = header.offsetTop;
+    const toTop = document.querySelector('#to-top');
 
     if (window.scrollY > fixedNav) {
-        navbarNav.classList.add('navbar-fixed');
+        header.classList.add('navbar-fixed');
+        toTop.classList.remove('hidden');
+        toTop.classList.add('flex');
     } else {
-        navbarNav.classList.remove('navbar-fixed');
+        header.classList.remove('navbar-fixed');
+        toTop.classList.remove('flex');
+        toTop.classList.add('hidden');
     }
-}
+};
+
+// Hamburger
+const hamburger = document.querySelector('#hamburger');
+const navMenu = document.querySelector('#nav-menu');
+
+hamburger.addEventListener('click', function () {
+    hamburger.classList.toggle('hamburger-active');
+    navMenu.classList.toggle('hidden');
+});
+
+// Out Hamburger
+window.addEventListener('click', function (e) {
+    if (e.target != hamburger && e.target != navMenu) {
+        hamburger.classList.remove('hamburger-active');
+        navMenu.classList.add('hidden');
+    }
+});
 
 
 // Menu Active
@@ -25,6 +47,9 @@ menuLinks.forEach(link => {
         this.classList.add('active');
     });
 });
+
+
+
 
 // Menu Slide
 function changeSlide(index) {
@@ -71,13 +96,13 @@ function updateFileName(input) {
 
 
 // Hamburger Menu
-const hamburger = document.querySelector('#hamburger');
-const navMenu = document.querySelector('#navbar');
+// const hamburger = document.querySelector('#hamburger');
+// const navMenu = document.querySelector('#navbar');
 
-hamburger.addEventListener('click', function () {
-    hamburger.classList.toggle('hamburger-active');
-    navMenu.classList.toggle('hidden');
-});
+// hamburger.addEventListener('click', function () {
+//     hamburger.classList.toggle('hamburger-active');
+//     navMenu.classList.toggle('hidden');
+// });
 
 
 
