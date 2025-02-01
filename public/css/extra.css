@@ -79,6 +79,10 @@
   }
 }
 
+/* .css {
+  color: oklch(0.623 0.214 259.815);
+} */
+
 .text-shadow {
   text-shadow: 0 4px 4px black;
 }
